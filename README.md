@@ -16,6 +16,7 @@ The plugin defines different tasks:
 - `staticGreeting`, a task which is using statically compile Groovy
 - `staticGroovyShellGreeting`, a task which is using statically compile Groovy and executes the code in a Groovy shell
 - `dynamicWorkerApiGreeting`, a task which is again using dynamic Groovy, but executes the task using the Worker API out-of-process
+- `javaExecGreeting`, a task written in Java which executes the script in a Groovy shell using Java Exec
 
 ## Testing
 
