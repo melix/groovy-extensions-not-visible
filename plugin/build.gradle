@@ -1,0 +1,23 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'groovy'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation localGroovy()
+    implementation "com.acme:groovy-ext-module:1.0"
+}
+
+gradlePlugin {
+    plugins {
+        greeting {
+            id = 'com.acme.plugin.greeting'
+            implementationClass = 'com.acme.plugin.GreetingPlugin'
+        }
+    }
+}
+
