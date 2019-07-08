@@ -8,10 +8,13 @@ The project is a composite build which consists of 3 modules:
 - `plugin`, a Gradle plugin which declares tasks which use the extension method
 - `consumer`, a Gradle project which uses the plugin above
 
-The plugin defines 3 different tasks:
+The plugin defines different tasks:
 
 - `dynamicGreeting`, a task which is using dynamic Groovy, and therefore requires the extension to be visible at runtime
+- `dynamicGroovyShellGreeting`, a task which is using dynamic Groovy, and executes the code in a Groovy shell
+- `dynamicGroovyStaticShellGreeting`, a task which is using dynamic Groovy, and executes the code in a Groovy shell with `@CompileStatic` applied
 - `staticGreeting`, a task which is using statically compile Groovy
+- `staticGroovyShellGreeting`, a task which is using statically compile Groovy and executes the code in a Groovy shell
 - `dynamicWorkerApiGreeting`, a task which is again using dynamic Groovy, but executes the task using the Worker API out-of-process
 
 ## Testing

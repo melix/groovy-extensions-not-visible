@@ -1,6 +1,6 @@
 
 // delegate to consumer
-['dynamic', 'static', 'dynamicWorkerApi'].each { id ->
+['dynamic', 'static', 'dynamicWorkerApi', 'staticGroovyShell', 'dynamicGroovyShell', 'dynamicGroovyStaticShell'].each { id ->
    String taskName = "${id}Greeting"
    tasks.register(taskName) {
       dependsOn(gradle.includedBuild("consumer").task(":$taskName"))

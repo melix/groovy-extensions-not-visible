@@ -14,7 +14,10 @@ import org.gradle.api.Project
 class GreetingPlugin implements Plugin<Project> {
     void apply(Project project) {
         project.tasks.register("staticGreeting", StaticGreetingTask)
+        project.tasks.register("staticGroovyShellGreeting", StaticGroovyShellGreetingTask)
         project.tasks.register("dynamicGreeting", DynamicGreetingTask)
+        project.tasks.register("dynamicGroovyShellGreeting", DynamicGroovyShellGreetingTask)
+        project.tasks.register("dynamicGroovyStaticShellGreeting", DynamicGroovyStaticShellGreetingTask)
         project.tasks.register("dynamicWorkerApiGreeting", DynamicWorkerApiGreetingTask)
     }
 }
